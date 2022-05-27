@@ -9,6 +9,7 @@ class MyDocument extends Document {
           <meta name="msapplication-TileColor" content="#298a7b" />
           <meta name="theme-color" content="#298a7b" />
           <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
+          <link rel="icon" href="/static/favicons/favicon.ico" />
         </Head>
         <body className="bg-white text-black antialiased dark:bg-gray-900 dark:text-white">
           <Main />
