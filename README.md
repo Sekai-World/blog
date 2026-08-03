@@ -127,6 +127,8 @@ npx degit 'timlrx/tailwind-nextjs-starter-blog#typescript'
 
 ## Installation
 
+This project requires Node.js 20.x. The supported major version is recorded in `.nvmrc`.
+
 ```bash
 npm install
 ```
