@@ -9,14 +9,25 @@ import Router from 'next/router'
 export const ClientReload = () => {
   // Exclude socket.io from prod bundle
   useEffect(() => {
+    let active = true
+    let socket
+
     import('socket.io-client').then((module) => {
-      const socket = module.io()
+      if (!active) return
+
+      socket = module.io()
       socket.on('reload', (data) => {
         Router.replace(Router.asPath, undefined, {
           scroll: false,
         })
       })
     })
+
+    return () => {
+      active = false
+      socket?.off('reload')
+      socket?.disconnect()
+    }
   }, [])
 
   return null

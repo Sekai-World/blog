@@ -75,11 +75,15 @@ module.exports = withBundleAnalyzer({
     if (!dev && !isServer) {
       // Replace React with Preact only in client production build
       Object.assign(config.resolve.alias, {
-        'react/jsx-runtime.js': 'preact/compat/jsx-runtime',
+        'react/jsx-runtime.js': 'preact/jsx-runtime',
+        'react/jsx-runtime': 'preact/jsx-runtime',
         react: 'preact/compat',
         'react-dom/test-utils': 'preact/test-utils',
         'react-dom': 'preact/compat',
       })
+    } else {
+      // mdx-bundler v8 emits the former React JSX-runtime .js subpath.
+      config.resolve.alias['react/jsx-runtime.js'] = require.resolve('react/jsx-runtime')
     }
 
     return config
