@@ -6,6 +6,15 @@ import CustomLink from './Link'
 import TOCInline from './TOCInline'
 import Pre from './Pre'
 import { BlogNewsletterForm } from './NewsletterForm'
+import AuthorLayout from '@/layouts/AuthorLayout'
+import PostLayout from '@/layouts/PostLayout'
+import PostSimple from '@/layouts/PostSimple'
+
+const layouts = {
+  AuthorLayout,
+  PostLayout,
+  PostSimple,
+}
 
 export const MDXComponents = {
   Image,
@@ -14,7 +23,10 @@ export const MDXComponents = {
   pre: Pre,
   BlogNewsletterForm: BlogNewsletterForm,
   wrapper: ({ components, layout, ...rest }) => {
-    const Layout = require(`../layouts/${layout}`).default
+    const Layout = layouts[layout]
+    if (!Layout) {
+      throw new Error(`Unsupported MDX layout: ${layout}`)
+    }
     return <Layout {...rest} />
   },
 }
