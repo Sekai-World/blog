@@ -1,6 +1,10 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@config "../tailwind.config.js";
+@plugin "@tailwindcss/forms";
+@plugin "@tailwindcss/typography";
+@import "tailwindcss";
+
+/* Keep the existing next-themes class strategy instead of Tailwind's media query. */
+@custom-variant dark (&:where(.dark, .dark *));
 
 .task-list-item::before {
   @apply hidden;
