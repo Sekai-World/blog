@@ -42,11 +42,11 @@ npm run dev
 
 The available scripts are:
 
-| Command | Description |
-| --- | --- |
-| `npm run dev` | Start Next.js development mode (`next dev`). |
-| `npm start` | Run the remote-watch entrypoint with the data directory watched (`SOCKET=true node scripts/next-remote-watch.js ./data`). |
-| `npm run lint` | Run Next.js linting with autofix (`next lint --fix`). |
+| Command         | Description                                                                                |
+| --------------- | ------------------------------------------------------------------------------------------ |
+| `npm run dev`   | Start Next.js development mode (`next dev`).                                               |
+| `npm start`     | Run the production server after `npm run build` (`next start`).                            |
+| `npm run lint`  | Run ESLint over the application source.                                                    |
 | `npm run build` | Build the site and generate its sitemap (`next build && node ./scripts/generate-sitemap`). |
 
 Before opening a pull request, run:

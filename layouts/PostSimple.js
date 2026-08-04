@@ -21,7 +21,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
               <dl>
                 <div>
                   <dt className="sr-only">Published on</dt>
-                  <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
+                  <dd className="text-base leading-6 font-medium text-gray-500 dark:text-gray-400">
                     <time dateTime={date}>{formatDate(date)}</time>
                   </dd>
                 </div>
@@ -32,11 +32,11 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
             </div>
           </header>
           <div
-            className="divide-y divide-gray-200 pb-8 dark:divide-gray-700 xl:divide-y-0 "
+            className="divide-y divide-gray-200 pb-8 xl:divide-y-0 dark:divide-gray-700"
             style={{ gridTemplateRows: 'auto 1fr' }}
           >
-            <div className="divide-y divide-gray-200 dark:divide-gray-700 xl:col-span-3 xl:row-span-2 xl:pb-0">
-              <div className="prose max-w-none pt-10 pb-8 dark:prose-dark">{children}</div>
+            <div className="divide-y divide-gray-200 xl:col-span-3 xl:row-span-2 xl:pb-0 dark:divide-gray-700">
+              <div className="prose dark:prose-dark max-w-none pt-10 pb-8">{children}</div>
             </div>
             <Comments frontMatter={frontMatter} />
             <footer>
