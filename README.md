@@ -70,7 +70,7 @@ post body below YAML frontmatter. The supported frontmatter fields are:
 - `images`
 - `canonicalUrl`
 - `layout`
-- `authors`
+- `authors` (optional array of author slugs, each matching a file under `data/authors/`)
 
 For example:
 
@@ -83,6 +83,7 @@ lastmod: '2026-01-02'
 draft: false
 summary: 'A short description for the post.'
 images: ['/static/images/example.png']
+authors: ['default']
 canonicalUrl: 'https://sekai-world-blog.netlify.app/blog/example'
 layout: PostLayout
 ---
@@ -113,6 +114,6 @@ Please keep local environment files and unrelated changes out of commits.
 
 This repository is a Sekai World fork of the
 [Tailwind Nextjs Starter Blog](https://github.com/timlrx/tailwind-nextjs-starter-blog),
-originally created by [Timothy Lin](https://www.timrlx.com/). It retains the
+originally created by [Timothy Lin](https://www.timlrx.com/). It retains the
 original template's MIT licensing and attribution; see [`LICENSE`](./LICENSE)
 for the full text.
