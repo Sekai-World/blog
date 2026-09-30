@@ -25,9 +25,14 @@ Once again, let's **WONDERHOI** for the 6th anniversary of Project Sekai! 🎂
 
 In the [previous post](/blog/looking-ahead-sekai-viewer-reborn-and-migration-plan), I shared the long-term plan to gradually move from the legacy Sekai Viewer to **Sekai Viewer Reborn**. Here is where things stand now.
 
-Development has kept moving steadily. The content site, which is the first public-facing part of Reborn, continues to grow, with pages for game information such as cards, music, characters and events becoming more complete and more polished.
+Development has moved a long way since the migration plan was announced. Reborn is now a set of four sites (content, tools, media lab and account), and the content site has grown into a broad game-data browser. Here are the highlights:
 
-{/* TODO(author): replace/extend the list below with concrete recent progress (new pages, performance, i18n, data sources, UI changes, etc.) */}
+- **Content site:** cards, characters and units, music, events, gachas, virtual lives, game news, and, more recently, **MySekai** (furniture, materials and soundtracks) as well as **titles, missions and honors** catalogues, all with region switching for JP, EN, TW, KR and CN where the data is available. The UI has also been through a round of visual polish and mobile improvements.
+- **Tools site:** an **event tracker** with per-region ranking history and snapshots, World Bloom chapter rankings, shareable links and a goal calculator, plus a view to compare current events across regions.
+- **Media lab:** a **story reader** with text scripts and a **Live2D player**, along with a Live2D model viewer. It is still in active development.
+- **Sekai Master API:** the new backend serving game data to Reborn. It now stores master data in PostgreSQL, caches the slowest routes, syncs data from multiple regions, and has gone through a lot of performance work to keep responses fast. It has also started tagging proper releases.
+
+Account features are still at an early stage, and not everything from the current Sekai Viewer has been brought over yet. The migration will stay gradual, as planned.
 
 Reborn is built on the ideas I described when the project was first announced: smaller, lighter server-side rendered applications instead of one huge single-page app. The practical benefits are:
 
