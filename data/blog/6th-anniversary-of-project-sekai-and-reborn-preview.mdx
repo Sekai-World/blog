@@ -30,7 +30,7 @@ Development has moved a long way since the migration plan was announced. Reborn 
 - **Content site:** cards, characters and units, music, events, gachas, virtual lives, game news, and, more recently, **MySekai** (furniture, materials and soundtracks) as well as **titles, missions and honors** catalogues, all with region switching for JP, EN, TW, KR and CN where the data is available. The UI has also been through a round of visual polish and mobile improvements.
 - **Tools site:** an **event tracker** with per-region ranking history and snapshots, World Bloom chapter rankings, shareable links and a goal calculator, plus a view to compare current events across regions.
 - **Media lab:** a **story reader** with text scripts and a **Live2D player**, along with a Live2D model viewer. It is still in active development.
-- **Sekai Master API:** the new backend serving game data to Reborn. It now stores master data in PostgreSQL, caches the slowest routes, syncs data from multiple regions, and has gone through a lot of performance work to keep responses fast. It has also started tagging proper releases.
+- **Sekai Master API:** the infrastructure for the future of Sekai Viewer. It is a new backend that provides APIs to query game data directly, so apps no longer have to dig through huge JSON files to find what they need. Master data is now stored in PostgreSQL, synced from multiple regions, cached on the slowest routes, and tuned for performance, which makes queries much faster. We are also considering opening it up for public access, so that other community projects can build on it too.
 
 Account features are still at an early stage, and not everything from the current Sekai Viewer has been brought over yet. The migration will stay gradual, as planned.
 
